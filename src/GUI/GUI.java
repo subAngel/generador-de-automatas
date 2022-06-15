@@ -70,31 +70,32 @@ public class GUI extends javax.swing.JFrame {
         txt_salir = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         panel_form = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txt_edo_inicial = new javax.swing.JTextField();
         panel_btn_graficar_automata = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        txt_alfabeto3 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        estado_2 = new javax.swing.JComboBox<>();
-        estado_Final_box = new javax.swing.JComboBox<>();
-        btn_estado_final = new javax.swing.JButton();
-        btn_add_alfabeto = new javax.swing.JButton();
-        btn_add_estado = new javax.swing.JButton();
-        btn_estado_inicial = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
-        estado_Inicial_box = new javax.swing.JComboBox<>();
-        estado_1 = new javax.swing.JComboBox<>();
-        elemento_alfabeto = new javax.swing.JComboBox<>();
         btn_add_transicion = new javax.swing.JButton();
-        jSeparator3 = new javax.swing.JSeparator();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         Gen_tabla = new javax.swing.JButton();
         btn_limpiar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        estado_1 = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        elemento_alfabeto = new javax.swing.JComboBox<>();
+        jLabel11 = new javax.swing.JLabel();
+        estado_2 = new javax.swing.JComboBox<>();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        txt_alfabeto3 = new javax.swing.JTextField();
+        btn_add_alfabeto = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        txt_edo_inicial = new javax.swing.JTextField();
+        btn_add_estado = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        estado_Inicial_box = new javax.swing.JComboBox<>();
+        btn_estado_inicial = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        estado_Final_box = new javax.swing.JComboBox<>();
+        btn_estado_final = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         panel_tablero = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_estados = new javax.swing.JScrollPane();
@@ -103,10 +104,10 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        background.setBackground(new java.awt.Color(254, 242, 246));
+        background.setBackground(new java.awt.Color(234, 235, 237));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panel_titulo.setBackground(new java.awt.Color(168, 209, 231));
+        panel_titulo.setBackground(new java.awt.Color(152, 218, 217));
         panel_titulo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 panel_tituloMouseDragged(evt);
@@ -121,11 +122,12 @@ public class GUI extends javax.swing.JFrame {
 
         panel_salir.setForeground(new java.awt.Color(168, 209, 231));
 
-        txt_salir.setBackground(new java.awt.Color(168, 209, 231));
+        txt_salir.setBackground(new java.awt.Color(152, 218, 217));
         txt_salir.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         txt_salir.setForeground(new java.awt.Color(51, 51, 51));
         txt_salir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt_salir.setText("X");
+        txt_salir.setText("x");
+        txt_salir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         txt_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txt_salir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,7 +158,7 @@ public class GUI extends javax.swing.JFrame {
 
         panel_titulo.add(panel_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 0, 50, 50));
 
-        jLabel1.setBackground(new java.awt.Color(168, 209, 231));
+        jLabel1.setBackground(new java.awt.Color(152, 218, 217));
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Generador De Autómatas");
@@ -164,69 +166,112 @@ public class GUI extends javax.swing.JFrame {
 
         background.add(panel_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 55));
 
-        panel_form.setBackground(new java.awt.Color(168, 209, 231));
+        panel_form.setBackground(new java.awt.Color(152, 218, 217));
         panel_form.setForeground(new java.awt.Color(204, 204, 204));
         panel_form.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("Alfabeto:");
-        panel_form.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, 30));
-
-        jLabel3.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel3.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Estado:");
-        panel_form.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, 30));
-
-        txt_edo_inicial.setBackground(new java.awt.Color(168, 232, 233));
-        txt_edo_inicial.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        txt_edo_inicial.setForeground(new java.awt.Color(51, 51, 51));
-        txt_edo_inicial.setText("Ej. q0");
-        txt_edo_inicial.setToolTipText("Estado a ingresar.\nEjemplo: q0");
-        txt_edo_inicial.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txt_edo_inicial.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txt_edo_inicialMouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                txt_edo_inicialMousePressed(evt);
-            }
-        });
-        txt_edo_inicial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_edo_inicialActionPerformed(evt);
-            }
-        });
-        panel_form.add(txt_edo_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 130, 30));
 
         panel_btn_graficar_automata.setBackground(new java.awt.Color(0, 153, 255));
         panel_btn_graficar_automata.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panel_btn_graficar_automata.setLayout(new java.awt.GridLayout(1, 0));
         panel_form.add(panel_btn_graficar_automata, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 722, -1, -1));
 
-        jLabel7.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel7.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("Estado Final:");
-        panel_form.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, 30));
+        btn_add_transicion.setBackground(new java.awt.Color(152, 218, 217));
+        btn_add_transicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flecha.png"))); // NOI18N
+        btn_add_transicion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(152, 218, 217), 1, true));
+        btn_add_transicion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_add_transicion.setMaximumSize(new java.awt.Dimension(20, 20));
+        btn_add_transicion.setMinimumSize(new java.awt.Dimension(20, 20));
+        btn_add_transicion.setOpaque(true);
+        btn_add_transicion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_add_transicionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_add_transicionMouseExited(evt);
+            }
+        });
+        btn_add_transicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_add_transicionActionPerformed(evt);
+            }
+        });
+        panel_form.add(btn_add_transicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 100, 50));
 
-        jLabel8.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel8.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel8.setText("Estado:");
-        panel_form.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, 30));
+        Gen_tabla.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        Gen_tabla.setText("Generar Tabla");
+        Gen_tabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gen_tablaActionPerformed(evt);
+            }
+        });
+        panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, 170, 40));
 
-        jLabel10.setBackground(new java.awt.Color(168, 209, 231));
+        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        btn_limpiar.setText("LImpiar tabla");
+        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_limpiarActionPerformed(evt);
+            }
+        });
+        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 180, 40));
+
+        jPanel1.setBackground(new java.awt.Color(152, 218, 217));
+        jPanel1.setLayout(new java.awt.GridLayout(3, 2, 40, 30));
+
+        jLabel10.setBackground(new java.awt.Color(152, 218, 217));
         jLabel10.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Estado:");
-        panel_form.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 40));
+        jPanel1.add(jLabel10);
+
+        estado_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estado_1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(estado_1);
+
+        jLabel12.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel12.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel12.setText("Elemento:");
+        jPanel1.add(jLabel12);
+
+        elemento_alfabeto.setToolTipText("");
+        elemento_alfabeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                elemento_alfabetoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(elemento_alfabeto);
+
+        jLabel11.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel11.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel11.setText("Estado:");
+        jPanel1.add(jLabel11);
+
+        estado_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estado_2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(estado_2);
+
+        panel_form.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 260, 170));
+
+        jPanel2.setBackground(new java.awt.Color(152, 218, 217));
+        jPanel2.setLayout(new java.awt.GridLayout(2, 3, 21, 25));
+
+        jLabel2.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("Alfabeto:");
+        jPanel2.add(jLabel2);
 
         txt_alfabeto3.setBackground(new java.awt.Color(168, 232, 233));
         txt_alfabeto3.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        txt_alfabeto3.setForeground(new java.awt.Color(51, 51, 51));
+        txt_alfabeto3.setForeground(new java.awt.Color(153, 153, 153));
         txt_alfabeto3.setText("Ej. a, b, c");
         txt_alfabeto3.setToolTipText("Alfabeto del autómata\nEjemplo: a, b, c");
         txt_alfabeto3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -243,35 +288,7 @@ public class GUI extends javax.swing.JFrame {
                 txt_alfabeto3ActionPerformed(evt);
             }
         });
-        panel_form.add(txt_alfabeto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 130, 30));
-
-        jLabel6.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel6.setText("Estado Inicial:");
-        panel_form.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, 30));
-
-        estado_2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estado_2ActionPerformed(evt);
-            }
-        });
-        panel_form.add(estado_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, 130, -1));
-
-        estado_Final_box.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estado_Final_boxActionPerformed(evt);
-            }
-        });
-        panel_form.add(estado_Final_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, -1));
-
-        btn_estado_final.setText("add");
-        btn_estado_final.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_estado_finalActionPerformed(evt);
-            }
-        });
-        panel_form.add(btn_estado_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 80, -1));
+        jPanel2.add(txt_alfabeto3);
 
         btn_add_alfabeto.setText("add");
         btn_add_alfabeto.addActionListener(new java.awt.event.ActionListener() {
@@ -279,7 +296,34 @@ public class GUI extends javax.swing.JFrame {
                 btn_add_alfabetoActionPerformed(evt);
             }
         });
-        panel_form.add(btn_add_alfabeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 80, 30));
+        jPanel2.add(btn_add_alfabeto);
+
+        jLabel3.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel3.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("Estado:");
+        jPanel2.add(jLabel3);
+
+        txt_edo_inicial.setBackground(new java.awt.Color(168, 232, 233));
+        txt_edo_inicial.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        txt_edo_inicial.setForeground(new java.awt.Color(153, 153, 153));
+        txt_edo_inicial.setText("Ej. q0");
+        txt_edo_inicial.setToolTipText("Estado a ingresar.\nEjemplo: q0");
+        txt_edo_inicial.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txt_edo_inicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_edo_inicialMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txt_edo_inicialMousePressed(evt);
+            }
+        });
+        txt_edo_inicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_edo_inicialActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txt_edo_inicial);
 
         btn_add_estado.setText("add");
         btn_add_estado.addActionListener(new java.awt.event.ActionListener() {
@@ -287,85 +331,71 @@ public class GUI extends javax.swing.JFrame {
                 btn_add_estadoActionPerformed(evt);
             }
         });
-        panel_form.add(btn_add_estado, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 80, -1));
+        jPanel2.add(btn_add_estado);
 
-        btn_estado_inicial.setText("add");
-        btn_estado_inicial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_estado_inicialActionPerformed(evt);
-            }
-        });
-        panel_form.add(btn_estado_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 80, -1));
+        panel_form.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 400, 100));
 
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        panel_form.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 340, 10));
+        jPanel3.setBackground(new java.awt.Color(152, 218, 217));
+        jPanel3.setLayout(new java.awt.GridLayout(2, 3, 20, 25));
+
+        jLabel6.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel6.setText("Estado Inicial:");
+        jPanel3.add(jLabel6);
 
         estado_Inicial_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estado_Inicial_boxActionPerformed(evt);
             }
         });
-        panel_form.add(estado_Inicial_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, -1, -1));
+        jPanel3.add(estado_Inicial_box);
 
-        estado_1.addActionListener(new java.awt.event.ActionListener() {
+        btn_estado_inicial.setText("add");
+        btn_estado_inicial.setPreferredSize(new java.awt.Dimension(70, 29));
+        btn_estado_inicial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estado_1ActionPerformed(evt);
+                btn_estado_inicialActionPerformed(evt);
             }
         });
-        panel_form.add(estado_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 130, -1));
+        jPanel3.add(btn_estado_inicial);
 
-        elemento_alfabeto.setToolTipText("");
-        elemento_alfabeto.addActionListener(new java.awt.event.ActionListener() {
+        jLabel7.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel7.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel7.setText("Estado Final:");
+        jPanel3.add(jLabel7);
+
+        estado_Final_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                elemento_alfabetoActionPerformed(evt);
+                estado_Final_boxActionPerformed(evt);
             }
         });
-        panel_form.add(elemento_alfabeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 130, 30));
+        jPanel3.add(estado_Final_box);
 
-        btn_add_transicion.setText("->");
-        btn_add_transicion.addActionListener(new java.awt.event.ActionListener() {
+        btn_estado_final.setText("add");
+        btn_estado_final.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_add_transicionActionPerformed(evt);
+                btn_estado_finalActionPerformed(evt);
             }
         });
-        panel_form.add(btn_add_transicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 60, 30));
+        jPanel3.add(btn_estado_final);
 
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        panel_form.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 340, 10));
+        panel_form.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 400, 100));
 
-        jLabel11.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel11.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel11.setText("-Transiciones-");
-        panel_form.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
+        jLabel8.setBackground(new java.awt.Color(152, 218, 217));
+        jLabel8.setFont(new java.awt.Font("Roboto Medium", 3, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Transiciones");
+        panel_form.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 260, 36));
 
-        jLabel12.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel12.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel12.setText("Elemento:");
-        panel_form.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, 30));
+        background.add(panel_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, 440, 680));
 
-        Gen_tabla.setText("Generar Tabla");
-        Gen_tabla.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Gen_tablaActionPerformed(evt);
-            }
-        });
-        panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, -1));
-
-        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        btn_limpiar.setText("LImpiar tabla");
-        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_limpiarActionPerformed(evt);
-            }
-        });
-        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 600, 180, 40));
-
-        background.add(panel_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, 440, 760));
-
-        panel_tablero.setBackground(new java.awt.Color(204, 255, 255));
+        panel_tablero.setBackground(new java.awt.Color(91, 130, 145));
         panel_tablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane1.setBackground(new java.awt.Color(234, 235, 237));
         panel_tablero.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 560, 410));
 
         background.add(panel_tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 600, 450));
@@ -382,7 +412,7 @@ public class GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 737, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -427,6 +457,10 @@ public class GUI extends javax.swing.JFrame {
 
     private void txt_edo_inicialMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_edo_inicialMousePressed
         // TODO add your handling code here:
+        txt_edo_inicial.setText("");
+        txt_edo_inicial.setForeground(new Color(51,51,51));
+        txt_alfabeto3.setText("Ej. a,b,c");
+        txt_alfabeto3.setForeground(new Color(153,153,153));
         
     }//GEN-LAST:event_txt_edo_inicialMousePressed
 
@@ -436,6 +470,11 @@ public class GUI extends javax.swing.JFrame {
 
     private void txt_alfabeto3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_alfabeto3MousePressed
         // TODO add your handling code here:
+        txt_alfabeto3.setText("");
+        txt_alfabeto3.setForeground(new Color(51,51,51));
+        txt_edo_inicial.setText("Ej. q0");
+        txt_edo_inicial.setForeground(new Color(153,153,153));
+        
     }//GEN-LAST:event_txt_alfabeto3MousePressed
 
     private void txt_alfabeto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_alfabeto3ActionPerformed
@@ -707,6 +746,16 @@ public class GUI extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_Gen_tablaActionPerformed
 
+    private void btn_add_transicionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_add_transicionMouseEntered
+        // TODO add your handling code here:
+        btn_add_transicion.setBackground(new Color(91,130,145));
+    }//GEN-LAST:event_btn_add_transicionMouseEntered
+
+    private void btn_add_transicionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_add_transicionMouseExited
+        // TODO add your handling code here:
+        btn_add_transicion.setBackground(new Color(152,218,217));
+    }//GEN-LAST:event_btn_add_transicionMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -749,10 +798,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JPanel panel_btn_graficar_automata;
     private javax.swing.JPanel panel_form;
     private javax.swing.JPanel panel_salir;
