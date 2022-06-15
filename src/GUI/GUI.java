@@ -73,12 +73,10 @@ public class GUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txt_edo_inicial = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         panel_btn_graficar_automata = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txt_alfabeto3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -96,8 +94,6 @@ public class GUI extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txt_cadena = new javax.swing.JTextField();
-        btn_evaluar = new javax.swing.JButton();
         Gen_tabla = new javax.swing.JButton();
         panel_tablero = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -206,12 +202,6 @@ public class GUI extends javax.swing.JFrame {
         });
         panel_form.add(txt_edo_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 130, 30));
 
-        jLabel4.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel4.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("-Evaluar Cadena-");
-        panel_form.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, -1, -1));
-
         panel_btn_graficar_automata.setBackground(new java.awt.Color(0, 153, 255));
         panel_btn_graficar_automata.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panel_btn_graficar_automata.setLayout(new java.awt.GridLayout(1, 0));
@@ -231,12 +221,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Estado:");
         panel_form.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, 30));
-
-        jLabel9.setBackground(new java.awt.Color(168, 209, 231));
-        jLabel9.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel9.setText("Cadena: ");
-        panel_form.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 620, -1, 30));
 
         jLabel10.setBackground(new java.awt.Color(168, 209, 231));
         jLabel10.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
@@ -365,22 +349,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel12.setText("Elemento:");
         panel_form.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, 30));
 
-        txt_cadena.setText("cadena");
-        txt_cadena.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cadenaActionPerformed(evt);
-            }
-        });
-        panel_form.add(txt_cadena, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, 200, 40));
-
-        btn_evaluar.setText("Evaluar");
-        btn_evaluar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_evaluarActionPerformed(evt);
-            }
-        });
-        panel_form.add(btn_evaluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 200, -1));
-
         Gen_tabla.setText("Generar Tabla");
         Gen_tabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -389,32 +357,17 @@ public class GUI extends javax.swing.JFrame {
         });
         panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, -1));
 
-        background.add(panel_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, 360, 760));
+        background.add(panel_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, 440, 760));
 
         panel_tablero.setBackground(new java.awt.Color(204, 255, 255));
+        panel_tablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel_tablero.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 560, 410));
 
-        javax.swing.GroupLayout panel_tableroLayout = new javax.swing.GroupLayout(panel_tablero);
-        panel_tablero.setLayout(panel_tableroLayout);
-        panel_tableroLayout.setHorizontalGroup(
-            panel_tableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_tableroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panel_tableroLayout.setVerticalGroup(
-            panel_tableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_tableroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        background.add(panel_tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 690, 450));
+        background.add(panel_tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 600, 450));
 
         tabla_estados.setViewportView(T_estructura);
 
-        background.add(tabla_estados, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, 690, 190));
+        background.add(tabla_estados, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, 600, 190));
 
         btn_limpiar.setText("Limpiar");
         btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -422,7 +375,7 @@ public class GUI extends javax.swing.JFrame {
                 btn_limpiarActionPerformed(evt);
             }
         });
-        background.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 750, 140, -1));
+        background.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 750, 180, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -726,21 +679,12 @@ public class GUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btn_add_transicionActionPerformed
 
-    private void btn_evaluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_evaluarActionPerformed
-        cadenaPrueba=txt_cadena.getText();
-        
-    }//GEN-LAST:event_btn_evaluarActionPerformed
-
     private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
 
         model.setRowCount(0);
         model.setColumnCount(0);
         T_estructura.setModel(model);
     }//GEN-LAST:event_btn_limpiarActionPerformed
-
-    private void txt_cadenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadenaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cadenaActionPerformed
 
     private void Gen_tablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gen_tablaActionPerformed
 
@@ -793,7 +737,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton btn_add_transicion;
     private javax.swing.JButton btn_estado_final;
     private javax.swing.JButton btn_estado_inicial;
-    private javax.swing.JButton btn_evaluar;
     private javax.swing.JButton btn_limpiar;
     private javax.swing.JComboBox<String> elemento_alfabeto;
     private javax.swing.JComboBox<String> estado_1;
@@ -806,11 +749,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
@@ -823,7 +764,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel panel_titulo;
     private javax.swing.JScrollPane tabla_estados;
     private javax.swing.JTextField txt_alfabeto3;
-    private javax.swing.JTextField txt_cadena;
     private javax.swing.JTextField txt_edo_inicial;
     private javax.swing.JLabel txt_salir;
     // End of variables declaration//GEN-END:variables
