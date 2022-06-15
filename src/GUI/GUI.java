@@ -195,7 +195,7 @@ public class GUI extends javax.swing.JFrame {
                 btn_add_transicionActionPerformed(evt);
             }
         });
-        panel_form.add(btn_add_transicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 100, 50));
+        panel_form.add(btn_add_transicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 100, 50));
 
         Gen_tabla.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         Gen_tabla.setText("Generar Tabla");
@@ -204,16 +204,16 @@ public class GUI extends javax.swing.JFrame {
                 Gen_tablaActionPerformed(evt);
             }
         });
-        panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, 170, 40));
+        panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 170, 50));
 
-        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         btn_limpiar.setText("LImpiar tabla");
         btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_limpiarActionPerformed(evt);
             }
         });
-        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 180, 40));
+        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, 140, 40));
 
         jPanel1.setBackground(new java.awt.Color(152, 218, 217));
         jPanel1.setLayout(new java.awt.GridLayout(3, 2, 40, 30));
@@ -457,10 +457,15 @@ public class GUI extends javax.swing.JFrame {
 
     private void txt_edo_inicialMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_edo_inicialMousePressed
         // TODO add your handling code here:
-        txt_edo_inicial.setText("");
-        txt_edo_inicial.setForeground(new Color(51,51,51));
-        txt_alfabeto3.setText("Ej. a,b,c");
-        txt_alfabeto3.setForeground(new Color(153,153,153));
+        if(txt_edo_inicial.getText().equals("Ej. q0")){
+            txt_edo_inicial.setText("");
+            txt_edo_inicial.setForeground(new Color(51,51,51));
+        }
+        if(txt_alfabeto3.getText().isEmpty()){
+            txt_alfabeto3.setForeground(new Color(153,153,153));
+            txt_alfabeto3.setText("Ej. a, b, c");
+        }
+        
         
     }//GEN-LAST:event_txt_edo_inicialMousePressed
 
@@ -470,11 +475,14 @@ public class GUI extends javax.swing.JFrame {
 
     private void txt_alfabeto3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_alfabeto3MousePressed
         // TODO add your handling code here:
-        txt_alfabeto3.setText("");
-        txt_alfabeto3.setForeground(new Color(51,51,51));
-        txt_edo_inicial.setText("Ej. q0");
-        txt_edo_inicial.setForeground(new Color(153,153,153));
-        
+        if (txt_alfabeto3.getText().equals("Ej. a, b, c")){
+            txt_alfabeto3.setText("");
+            txt_alfabeto3.setForeground(new Color(51,51,51));
+        }
+        if(txt_edo_inicial.getText().isBlank()){
+            txt_edo_inicial.setText("Ej. q0");
+            txt_edo_inicial.setForeground(new Color(153,153,153));
+        }
     }//GEN-LAST:event_txt_alfabeto3MousePressed
 
     private void txt_alfabeto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_alfabeto3ActionPerformed
@@ -748,7 +756,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btn_add_transicionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_add_transicionMouseEntered
         // TODO add your handling code here:
-        btn_add_transicion.setBackground(new Color(91,130,145));
+        btn_add_transicion.setBackground(new Color(112,175,206));
     }//GEN-LAST:event_btn_add_transicionMouseEntered
 
     private void btn_add_transicionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_add_transicionMouseExited
