@@ -768,11 +768,11 @@ public class GUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        try {
-            UIManager.setLookAndFeel(new MaterialLookAndFeel()); //</editor-fold>
-        } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            UIManager.setLookAndFeel(new MaterialLookAndFeel()); //</editor-fold>
+//        } catch (UnsupportedLookAndFeelException ex) {
+//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
