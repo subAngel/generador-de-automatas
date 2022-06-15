@@ -74,7 +74,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txt_edo_inicial = new javax.swing.JTextField();
         panel_btn_graficar_automata = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -95,11 +94,11 @@ public class GUI extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         Gen_tabla = new javax.swing.JButton();
+        btn_limpiar = new javax.swing.JButton();
         panel_tablero = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_estados = new javax.swing.JScrollPane();
         T_estructura = new javax.swing.JTable();
-        btn_limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -206,9 +205,6 @@ public class GUI extends javax.swing.JFrame {
         panel_btn_graficar_automata.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panel_btn_graficar_automata.setLayout(new java.awt.GridLayout(1, 0));
         panel_form.add(panel_btn_graficar_automata, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 722, -1, -1));
-
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        panel_form.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 340, 10));
 
         jLabel7.setBackground(new java.awt.Color(168, 209, 231));
         jLabel7.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
@@ -357,6 +353,15 @@ public class GUI extends javax.swing.JFrame {
         });
         panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, -1));
 
+        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        btn_limpiar.setText("LImpiar tabla");
+        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_limpiarActionPerformed(evt);
+            }
+        });
+        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 600, 180, 40));
+
         background.add(panel_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, 440, 760));
 
         panel_tablero.setBackground(new java.awt.Color(204, 255, 255));
@@ -369,14 +374,6 @@ public class GUI extends javax.swing.JFrame {
 
         background.add(tabla_estados, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, 600, 190));
 
-        btn_limpiar.setText("Limpiar");
-        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_limpiarActionPerformed(evt);
-            }
-        });
-        background.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 750, 180, 40));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -385,7 +382,7 @@ public class GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 737, Short.MAX_VALUE)
         );
 
         pack();
@@ -754,7 +751,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JPanel panel_btn_graficar_automata;
