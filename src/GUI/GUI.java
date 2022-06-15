@@ -9,6 +9,7 @@ import Automata.TransicionAFD;
 import Grafo.ManejaGrafo;
 import com.mxgraph.swing.mxGraphComponent;
 import java.awt.Color;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -52,6 +53,7 @@ public class GUI extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/icono2.png")));
     }
     
     /**
@@ -199,6 +201,7 @@ public class GUI extends javax.swing.JFrame {
 
         Gen_tabla.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         Gen_tabla.setText("Generar Tabla");
+        Gen_tabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Gen_tabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Gen_tablaActionPerformed(evt);
@@ -206,8 +209,9 @@ public class GUI extends javax.swing.JFrame {
         });
         panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 170, 50));
 
-        btn_limpiar.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         btn_limpiar.setText("LImpiar tabla");
+        btn_limpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_limpiarActionPerformed(evt);

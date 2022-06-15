@@ -233,6 +233,9 @@
                   <Font name="Roboto" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Generar Tabla"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Gen_tablaActionPerformed"/>
@@ -246,9 +249,12 @@
             <Component class="javax.swing.JButton" name="btn_limpiar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Roboto" size="18" style="0"/>
+                  <Font name="Roboto" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="LImpiar tabla"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_limpiarActionPerformed"/>
