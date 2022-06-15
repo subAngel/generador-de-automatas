@@ -128,7 +128,7 @@ public class GUI extends javax.swing.JFrame {
         txt_salir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_salir.setText("x");
         txt_salir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        txt_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txt_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         txt_salir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txt_salirMouseClicked(evt);
@@ -195,7 +195,7 @@ public class GUI extends javax.swing.JFrame {
                 btn_add_transicionActionPerformed(evt);
             }
         });
-        panel_form.add(btn_add_transicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 100, 50));
+        panel_form.add(btn_add_transicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 100, 50));
 
         Gen_tabla.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         Gen_tabla.setText("Generar Tabla");
@@ -204,16 +204,16 @@ public class GUI extends javax.swing.JFrame {
                 Gen_tablaActionPerformed(evt);
             }
         });
-        panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 170, 50));
+        panel_form.add(Gen_tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 170, 50));
 
-        btn_limpiar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        btn_limpiar.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btn_limpiar.setText("LImpiar tabla");
         btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_limpiarActionPerformed(evt);
             }
         });
-        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, 140, 40));
+        panel_form.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, 150, 50));
 
         jPanel1.setBackground(new java.awt.Color(152, 218, 217));
         jPanel1.setLayout(new java.awt.GridLayout(3, 2, 40, 30));
@@ -291,6 +291,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel2.add(txt_alfabeto3);
 
         btn_add_alfabeto.setText("add");
+        btn_add_alfabeto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_add_alfabeto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_add_alfabetoActionPerformed(evt);
@@ -326,6 +327,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel2.add(txt_edo_inicial);
 
         btn_add_estado.setText("add");
+        btn_add_estado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_add_estado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_add_estadoActionPerformed(evt);
@@ -352,6 +354,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel3.add(estado_Inicial_box);
 
         btn_estado_inicial.setText("add");
+        btn_estado_inicial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_estado_inicial.setPreferredSize(new java.awt.Dimension(70, 29));
         btn_estado_inicial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,6 +377,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel3.add(estado_Final_box);
 
         btn_estado_final.setText("add");
+        btn_estado_final.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_estado_final.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_estado_finalActionPerformed(evt);
@@ -756,7 +760,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btn_add_transicionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_add_transicionMouseEntered
         // TODO add your handling code here:
-        btn_add_transicion.setBackground(new Color(112,175,206));
+        btn_add_transicion.setBackground(new Color(133,241,254));
     }//GEN-LAST:event_btn_add_transicionMouseEntered
 
     private void btn_add_transicionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_add_transicionMouseExited
@@ -768,11 +772,11 @@ public class GUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-//        try {
-//            UIManager.setLookAndFeel(new MaterialLookAndFeel()); //</editor-fold>
-//        } catch (UnsupportedLookAndFeelException ex) {
-//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        try {
+            UIManager.setLookAndFeel(new MaterialLookAndFeel()); //</editor-fold>
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
